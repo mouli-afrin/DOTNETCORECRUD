@@ -1,0 +1,30 @@
+﻿@model List<ASPNETMVCCRUD.Models.Domain.Student>;
+@{
+}
+<h1>Students</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>S_Name</th>
+            <th>S_Email</th>
+            <th>S_Date Of Birth</th>
+            <th>S_Department</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.S_Name</td>
+                <td>@student.S_Email</td>
+                <td>@student.S_DateOfBirth.ToString("dd-MM-yyyy")</td>
+                <td>@student.S_Department</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+
